@@ -13,7 +13,7 @@ class MtgCalc:
     def __init__(self, commandline_args):
         """
         Creating instance of MtgCalc and validating provided options.
-        :param commandline_args: commandline arguments without first one - name of module
+        :param commandline_args: command line arguments without first one - name of module
         """
         self._options, self._arguments = self._get_commandline_args(commandline_args)
         try:
@@ -45,7 +45,7 @@ class MtgCalc:
     def _newtons_symbol(n, k):
         """
         Staticmethod calculating Newton's symbol.
-        In the other words: Method calculates number of combinations
+        In other words: Method calculates number of combinations
         without repeat from the n-element set
         :param n: size of set
         :param k: size of sample took from set
@@ -89,9 +89,9 @@ class MtgCalc:
 
     def _get_commandline_args(self, commandline_args):
         """
-        Method takes commandline arguments and parses it to dict and list.
+        Method takes command line arguments and parses it to dict and list.
         If help option was provided method prints help info and ends programme.
-        :param commandline_args: commandline arguments without first one - name of module
+        :param commandline_args: command line arguments without first one - name of module
         :return: tuple of dict of options and list of arguments
         """
         try:
@@ -355,6 +355,7 @@ class MtgCalc:
         # all cards
         sum_sizes = 0
         for category in self._decklist_by_cmc:
+            # ignores sideboard, maybeboard and commander
             if category not in ('sideboard', 'maybeboard', 'commander'):
                 sum_sizes += self._decklist_by_cmc[category]['size']
 
