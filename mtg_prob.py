@@ -474,7 +474,6 @@ def main():
         mtg.calculate_statistics()
         mtg.create_output_strings()
         print('')
-        # save to file
 
 
 if __name__ == "__main__":
