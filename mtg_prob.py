@@ -455,8 +455,8 @@ def main():
     mtg = MtgCalc(sys.argv[1:])
     if not mtg.statistic_mode:
         print(f"Number of cards in deck: {mtg.num_of_cards}\n"
-              f"Number of draws: {mtg.num_of_draws}\t (starting player turn: {mtg.num_of_draws - 6}, other's turn: "
-              f"{mtg.num_of_draws -7})\n"
+              f"Number of draws (starting player turn {mtg.num_of_draws - 6}, other's turn "
+              f"{mtg.num_of_draws -7}): {mtg.num_of_draws}\n"
               f"Number of cards in deck which are desired: {mtg.num_of_desired_cards_in_deck}\n"
               f"Minimum number of desired cards drew to achieve success: {mtg.success_when}")
         print("Possibility of achieving that: %.2f%%" % (mtg.calculate_cumulative_probability() * 100))
